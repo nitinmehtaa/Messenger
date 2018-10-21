@@ -1,0 +1,17 @@
+name: whatsapp_redesign
+description: 'WhatsApp redesign in Flutter'
+version: 1.0.0+1
+environment:
+  sdk: '>=2.0.0-dev.68.0 <3.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  camera: ^0.2.4
+  path_provider: ^0.4.1
+  video_player: ^0.7.2
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
