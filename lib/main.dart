@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'screens/home.dart';
 import 'screens/calls.dart';
 import 'screens/camera.dart';
-import 'screens/Stories.dart';
-import 'screens/Contacts.dart';
+import 'screens/stories.dart';
+import 'screens/contacts.dart';
 
 void main() => runApp(new MyApp());
 
@@ -11,13 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter Bottom Navigation',
+      title: '',
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(
         primaryColor: const Color(0xFF2845E7),
         primaryColorDark: const Color(0xFF2845E7),
       ),
-      home: new DashboardScreen(title: 'Bottom Navigation'),
+      home: new DashboardScreen(title: ''),
     );
   }
 }
@@ -51,7 +51,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     // Animating to the page.
     // You can use whatever duration and curve you like
     _pageController.animateToPage(page,
-        duration: const Duration(milliseconds: 200), curve: Curves.decelerate);
+        duration: const Duration(milliseconds: 100), curve: Curves.decelerate);
   }
 
   void onPageChanged(int page) {
@@ -65,7 +65,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return new Scaffold(
       body: new PageView(
         children: [
-          new Home("Home screen"),
+          new Home("Home"),
           new calls("Calls screen"),
           new Camera("Camera screen"),
           new Stories("Stories screen"),
