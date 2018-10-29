@@ -26,7 +26,7 @@ List<StoriesModel> storiesMockData = [
           "https://images.unsplash.com/photo-1540587659271-5a67befab04a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ac7169ee44a4813f7f832b87ed1f7d22&auto=format&fit=crop&w=500&q=60",
       storySeen: true),
   new StoriesModel(
-      name: "Rekha",
+      name: "Sid",
       day: "Today",
       time: "12:30 PM",
       storyImageUrl:

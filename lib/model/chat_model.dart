@@ -9,9 +9,8 @@ class ChatModel {
 
 List<ChatModel> ChatMockData = [
   new ChatModel(
-      name: "My name is Nitin Mehta",
-      message:
-          "Hello there, how are you. I am testing this message length how far it can go and break your UI in Row There is a lot to take in here so let’s run through it. In our _HomeState class we implement the build method for our Home widget. The widget we return from our build method is called Scaffold. This widget has some nice properties for helping us lay",
+      name: "Abhishek",
+      message: "Where are you ?",
       time: "12:30 AM",
       imageUrl:
           "http://www.usanetwork.com/sites/usanetwork/files/styles/629x720/public/suits_cast_harvey.jpg?itok=fpTOeeBb"),
