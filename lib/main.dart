@@ -106,9 +106,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   "Camera",
                 )),
             new BottomNavigationBarItem(
-                icon: new Icon(
-                  Icons.favorite,
-                ),
+                icon: new Stack(children: <Widget>[
+                  new Icon(Icons.favorite),
+                  new Positioned(
+                      top: -1.0,
+                      right: -1.0,
+                      child: new Stack(
+                        children: <Widget>[
+                          new Icon(
+                            Icons.brightness_1,
+                            size: 12.0,
+                            color: const Color(0xFF2845E7),
+                          ),
+                        ],
+                      ))
+                ]),
                 title: new Text(
                   "Stories",
                 )),
