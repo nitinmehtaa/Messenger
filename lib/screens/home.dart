@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp_redesign/model/stories_model.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class Home extends StatelessWidget {
   Home(this.listType);
@@ -26,7 +27,7 @@ class Home extends StatelessWidget {
         children: <Widget>[
           new Padding(padding: const EdgeInsets.fromLTRB(0.0, 3.0, 0.0, 8.0)),
           new Container(
-            height: 280.0,
+            height: 220.0,
             color: Colors.greenAccent,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
@@ -37,31 +38,88 @@ class Home extends StatelessWidget {
                           padding:
                               const EdgeInsets.fromLTRB(5.0, 5.0, 5.0, 5.0),
                           child: new Container(
-                              color: Colors.amber,
-                              width: 100.0,
-                              height: 260.0,
-                              child: new Stack(
-                                children: <Widget>[
-                                  new Column(
-                                    children: <Widget>[
-                                      new Container(
-                                        decoration: new BoxDecoration(
-                                            image: new DecorationImage(
-                                                image: new NetworkImage(
+                            color: Colors.amber,
+                            width: 100.0, //story container width
+                            height: 210.0, //story container height
+                            child: new Stack(
+                              alignment: Alignment.center,
+                              children: <Widget>[
+                                new Column(
+                                  children: <Widget>[
+                                    new Container(
+                                      decoration: new BoxDecoration(
+                                          image: new DecorationImage(
+                                              image:
+                                                  new CachedNetworkImageProvider(
+                                                      storiesMockData[position]
+                                                          .storyImageUrl),
+                                              fit: BoxFit.cover),
+                                          borderRadius:
+                                              new BorderRadius.circular(10.0)),
+                                      width: 100.0, //story image width
+                                      height: 140.0,
+                                      child: new Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            5.0, 85.0, 5.0, 5.0),
+                                        child: new Text(
+                                          storiesMockData[position].name,
+                                          style: new TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 18.0,
+                                              fontStyle: FontStyle.normal,
+                                              color: Colors.white),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ), //story image height
+                                    ),
+                                  ],
+                                ),
+                                new Padding(
+                                  child: new PhysicalModel(
+                                    borderRadius:
+                                        new BorderRadius.circular(25.0),
+                                    color: Colors.green,
+                                    child: new Container(
+                                      width: 50.0,
+                                      height: 50.0,
+                                      decoration: new BoxDecoration(
+                                        image: new DecorationImage(
+                                            image:
+                                                new CachedNetworkImageProvider(
                                                     storiesMockData[position]
-                                                        .storyImageUrl),
-                                                fit: BoxFit.cover),
-                                            borderRadius:
-                                                new BorderRadius.circular(
-                                                    10.0)),
-                                        width: 100.0,
-                                        height: 180.0,
+                                                        .profileImageUrl),
+                                            fit: BoxFit.cover),
+                                        borderRadius:
+                                            new BorderRadius.circular(25.0),
+                                        border: new Border.all(
+                                          width: 3.0,
+                                          color: const Color(0xFF2845E7),
+                                        ),
                                       ),
-                                    ],
+                                    ),
                                   ),
-                                  new Text(storiesMockData[position].name),
-                                ],
-                              )),
+                                  padding: const EdgeInsets.fromLTRB(
+                                      5.0, 65.0, 5.0, 0.0),
+                                ),
+                                new Padding(
+                                    padding: const EdgeInsets.fromLTRB(
+                                        5.0, 140.0, 5.0, 0.0),
+                                    child: new Center(
+                                      child: new Text(
+                                        storiesMockData[position].day,
+                                      ),
+                                    )),
+                                new Padding(
+                                  padding: const EdgeInsets.fromLTRB(
+                                      5.0, 172.0, 5.0, 0.0),
+                                  child:
+                                      new Text(storiesMockData[position].time),
+                                )
+                              ],
+                            ),
+                          ),
                         ),
                       ],
                     )),
@@ -71,40 +129,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
-//Widget _storiesHorizontalListView(BuildContext context) {
-//  return new ListView.builder(
-//      itemCount: storiesMockData == null ? 0 : storiesMockData.length,
-//      scrollDirection: Axis.horizontal,
-//      itemBuilder: (context, int index) {
-//        var storiesData = storiesMockData[index];
-//        return GestureDetector(
-//          onTap: () => Scaffold.of(context)
-//              .showSnackBar(SnackBar(content: Text(index.toString()))),
-//          child: new Stack(
-//            children: <Widget>[
-//              new Container(
-//                decoration: new BoxDecoration(
-//                    image: new DecorationImage(
-//                        image: new NetworkImage(
-//                            storiesMockData[index].storyImageUrl),
-//                        fit: BoxFit.cover)),
-//                width: 150.0,
-//                height: 250.0,
-//                padding: const EdgeInsets.all(5.0),
-//              ),
-//              new Center(
-//                child: new Text(storiesMockData[index].name,
-//                    style: new TextStyle(
-//                        fontWeight: FontWeight.bold,
-//                        fontSize: 15.0,
-//                        color: Colors.white),
-//                    maxLines: 1,
-//                    textAlign: TextAlign.center,
-//                    overflow: TextOverflow.ellipsis),
-//              )
-//            ],
-//          ),
-//        );
-//      });
-//}

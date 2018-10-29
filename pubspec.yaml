@@ -10,6 +10,7 @@ dependencies:
   camera: ^0.2.4
   path_provider: ^0.4.1
   video_player: ^0.7.2
+  cached_network_image: ^0.4.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
