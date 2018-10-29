@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp_redesign/model/stories_model.dart';
+import 'package:whatsapp_redesign/model/chat_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 class Home extends StatelessWidget {
@@ -9,6 +10,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _width = MediaQuery.of(context).size.width;
+    final _height = MediaQuery.of(context).size.height;
     return new Scaffold(
       backgroundColor: const Color(0xFFF7F7F7),
       appBar: new AppBar(
@@ -32,7 +35,7 @@ class Home extends StatelessWidget {
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: storiesMockData.length,
-                itemBuilder: (BuildContext context, int position) => new Column(
+                itemBuilder: (context, int position) => new Column(
                       children: <Widget>[
                         new Padding(
                           padding:
@@ -123,6 +126,11 @@ class Home extends StatelessWidget {
                         ),
                       ],
                     )),
+          ),
+          new Container(
+            width: _width,
+            height: 250.0,
+            color: Colors.redAccent,
           ),
         ],
       ),

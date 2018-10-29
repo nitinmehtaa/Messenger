@@ -7,7 +7,7 @@ class ChatModel {
   ChatModel({this.name, this.message, this.time, this.imageUrl});
 }
 
-List<ChatModel> mockData = [
+List<ChatModel> ChatMockData = [
   new ChatModel(
       name: "My name is Nitin Mehta",
       message:

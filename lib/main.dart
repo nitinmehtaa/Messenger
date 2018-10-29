@@ -80,83 +80,44 @@ class _DashboardScreenState extends State<DashboardScreen> {
           canvasColor: Colors.white,
         ), // sets the inactive color of the `BottomNavigationBar`
         child: new BottomNavigationBar(
-          type: BottomNavigationBarType.shifting,
+          type: BottomNavigationBarType.fixed,
+          fixedColor: const Color(0xFF2845E7),
           items: [
             new BottomNavigationBarItem(
               icon: new Icon(
                 Icons.home,
-                color: Colors.grey,
-              ),
-              activeIcon: Icon(
-                Icons.home,
-                color: const Color(0xFF2845E7),
               ),
               title: new Text(
                 "Home",
-                style: new TextStyle(
-                  color: const Color(0xFF2845E7),
-                ),
               ),
             ),
             new BottomNavigationBarItem(
                 icon: new Icon(
                   Icons.call,
-                  color: Colors.grey,
-                ),
-                activeIcon: Icon(
-                  Icons.call,
-                  color: const Color(0xFF2845E7),
                 ),
                 title: new Text(
                   "Calls",
-                  style: new TextStyle(
-                    color: const Color(0xFF2845E7),
-                  ),
                 )),
             new BottomNavigationBarItem(
                 icon: new Icon(
                   Icons.camera_alt,
-                  color: Colors.grey,
-                ),
-                activeIcon: Icon(
-                  Icons.camera_alt,
-                  color: const Color(0xFF2845E7),
                 ),
                 title: new Text(
                   "Camera",
-                  style: new TextStyle(
-                    color: const Color(0xFF2845E7),
-                  ),
                 )),
             new BottomNavigationBarItem(
                 icon: new Icon(
                   Icons.favorite,
-                  color: Colors.grey,
-                ),
-                activeIcon: Icon(
-                  Icons.favorite,
-                  color: const Color(0xFF2845E7),
                 ),
                 title: new Text(
                   "Stories",
-                  style: new TextStyle(
-                    color: const Color(0xFF2845E7),
-                  ),
                 )),
             new BottomNavigationBarItem(
                 icon: new Icon(
                   Icons.account_circle,
-                  color: Colors.grey,
-                ),
-                activeIcon: Icon(
-                  Icons.account_circle,
-                  color: const Color(0xFF2845E7),
                 ),
                 title: new Text(
                   "Contacts",
-                  style: new TextStyle(
-                    color: const Color(0xFF2845E7),
-                  ),
                 )),
           ],
           onTap: navigationTapped,
