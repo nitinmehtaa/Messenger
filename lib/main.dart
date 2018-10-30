@@ -51,7 +51,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     // Animating to the page.
     // You can use whatever duration and curve you like
     _pageController.animateToPage(page,
-        duration: const Duration(milliseconds: 100), curve: Curves.decelerate);
+        duration: const Duration(milliseconds: 10), curve: Curves.linear);
   }
 
   void onPageChanged(int page) {

@@ -1,12 +1,12 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsapp_redesign/model/stories_model.dart';
 import 'package:whatsapp_redesign/model/chat_model.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+import 'package:whatsapp_redesign/model/stories_model.dart';
 
 class Home extends StatelessWidget {
-  Home(this.listType);
   final String listType;
+  Home(this.listType);
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +83,7 @@ class Home extends StatelessWidget {
                                   child: new PhysicalModel(
                                     borderRadius:
                                         new BorderRadius.circular(25.0),
-                                    color: Colors.green,
+                                    color: Colors.transparent,
                                     child: new Container(
                                       width: 50.0,
                                       height: 50.0,
