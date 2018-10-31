@@ -66,7 +66,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       body: new PageView(
         children: [
           new Home("Home"),
-          new calls("Calls screen"),
+          new Calls("Calls"),
           new Camera("Camera screen"),
           new Stories("Stories screen"),
           new Contacts("Contacts screen"),
