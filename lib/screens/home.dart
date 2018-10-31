@@ -98,7 +98,7 @@ class Home extends StatelessWidget {
                                             new BorderRadius.circular(25.0),
                                         border: new Border.all(
                                           width: 3.0,
-                                          color: const Color(0xFF2845E7),
+                                          color: storiesMockData[position].storySeen ? Colors.grey : const Color(0xFF2845E7)
                                         ),
                                       ),
                                     ),
@@ -137,8 +137,8 @@ class Home extends StatelessWidget {
                           color: const Color(0xFFFFFFFF),
                           child: new ListTile(
                             leading: new CircleAvatar(
-                              backgroundImage: new NetworkImage(
-                                  ChatMockData[position].imageUrl),
+                              backgroundImage: new CachedNetworkImageProvider(ChatMockData[position]
+                                                        .imageUrl),
                             ),
                             title: new Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,

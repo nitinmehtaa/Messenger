@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsapp_redesign/model/chat_model.dart';
 import 'package:whatsapp_redesign/model/calls_model.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class Calls extends StatelessWidget {
   Calls(this.listType);
@@ -34,7 +34,7 @@ class Calls extends StatelessWidget {
                     children: <Widget>[
                       new ListTile(
                         leading: new CircleAvatar(
-                          backgroundImage: new NetworkImage(
+                          backgroundImage: new CachedNetworkImageProvider(
                               callMockData[position].profileImageUrl),
                           backgroundColor: Colors.grey,
                         ),

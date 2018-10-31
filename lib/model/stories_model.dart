@@ -4,7 +4,7 @@ class StoriesModel {
   final String time;
   final String storyImageUrl;
   final String profileImageUrl;
-  final bool storySeen;
+  bool storySeen;
 
   StoriesModel(
       {this.name,
@@ -24,7 +24,7 @@ List<StoriesModel> storiesMockData = [
           "https://images.unsplash.com/photo-1538543917671-5116452b49e7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=78488bf52c88add77bbfa1b53a39455b&auto=format&fit=crop&w=500&q=60",
       profileImageUrl:
           "https://images.unsplash.com/photo-1540587659271-5a67befab04a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ac7169ee44a4813f7f832b87ed1f7d22&auto=format&fit=crop&w=500&q=60",
-      storySeen: true),
+      storySeen: false),
   new StoriesModel(
       name: "Sid",
       day: "Today",
@@ -42,7 +42,7 @@ List<StoriesModel> storiesMockData = [
           "https://images.unsplash.com/photo-1540224542762-172d4ce88192?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=37da393cbe4b9662a47c74d4fd82bacb&auto=format&fit=crop&w=500&q=60",
       profileImageUrl:
           "https://images.unsplash.com/photo-1526887520775-4b14b8aed897?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6863708b5fd99da795349ec8307699d2&auto=format&fit=crop&w=500&q=60",
-      storySeen: true),
+      storySeen: false),
   new StoriesModel(
       name: "Ayushi",
       day: "Today",
@@ -69,7 +69,7 @@ List<StoriesModel> storiesMockData = [
           "https://images.unsplash.com/photo-1447879027584-9d17c2ca0333?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83cef0904fa31f2670d4ee58c97bcc39&auto=format&fit=crop&w=500&q=60",
       profileImageUrl:
           "https://images.unsplash.com/photo-1539812343312-51c943aed7ca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b51361df5b4f7bb58a998b82fba1f0ed&auto=format&fit=crop&w=500&q=60",
-      storySeen: true),
+      storySeen: false),
   new StoriesModel(
       name: "Akash",
       day: "Today",
@@ -123,7 +123,7 @@ List<StoriesModel> storiesMockData = [
           "https://images.unsplash.com/photo-1447879027584-9d17c2ca0333?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83cef0904fa31f2670d4ee58c97bcc39&auto=format&fit=crop&w=500&q=60",
       profileImageUrl:
           "https://images.unsplash.com/photo-1539812343312-51c943aed7ca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b51361df5b4f7bb58a998b82fba1f0ed&auto=format&fit=crop&w=500&q=60",
-      storySeen: true),
+      storySeen: false),
   new StoriesModel(
       name: "Akash",
       day: "Today",
@@ -150,5 +150,5 @@ List<StoriesModel> storiesMockData = [
           "https://images.unsplash.com/photo-1512988674419-0f5fdf454021?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3de0f6970c59cca93287a6b330ba98cc&auto=format&fit=crop&w=500&q=60",
       profileImageUrl:
           "https://images.unsplash.com/photo-1539694023178-80dde47136c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=63f441f3c0115e3a3882605e648882d3&auto=format&fit=crop&w=500&q=60",
-      storySeen: true)
+      storySeen: false
 ];
