@@ -2,8 +2,8 @@
 
 Chat Messenger built in Flutter
 
-<img src="https://user-images.githubusercontent.com/14055844/55243981-49371800-5266-11e9-9066-723b6bd64f11.png" height="500" width="900"/>
-<img src="https://user-images.githubusercontent.com/14055844/55244014-57853400-5266-11e9-98b0-8b812736a05a.png" height="500" width="900"/>
+<img src="https://user-images.githubusercontent.com/14055844/55243981-49371800-5266-11e9-9066-723b6bd64f11.png" height="800" width="150"/>
+<img src="https://user-images.githubusercontent.com/14055844/55244014-57853400-5266-11e9-98b0-8b812736a05a.png" height=800" width="150"/>
 
 ## Getting Started
 
