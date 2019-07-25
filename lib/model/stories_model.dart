@@ -150,5 +150,5 @@ List<StoriesModel> storiesMockData = [
           "https://images.unsplash.com/photo-1512988674419-0f5fdf454021?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3de0f6970c59cca93287a6b330ba98cc&auto=format&fit=crop&w=500&q=60",
       profileImageUrl:
           "https://images.unsplash.com/photo-1539694023178-80dde47136c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=63f441f3c0115e3a3882605e648882d3&auto=format&fit=crop&w=500&q=60",
-      storySeen: false
+      storySeen: false),
 ];
